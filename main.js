@@ -30,7 +30,7 @@ var mainState = {
 
       this.score = 0;
       this.labelScore = game.add.text(20, 20, "0",
-      { font: "30px Arial", fill: "#ffffff" }); 
+      { font: "30px Arial", fill: "#ffffff" });
 
 
     },
@@ -72,6 +72,12 @@ var mainState = {
         for (var i = 0; i < 8; i++)
             if (i != hole && i != hole + 1 && i!=hole+2)
                 this.addOnePipe(400, i * 60 + 10);
+                this.score += 1;
+                this.labelScore.text = this.score;
+
+
+
+
     },
 };
 
